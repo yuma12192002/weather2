@@ -10,25 +10,29 @@ function App() {
   }
 
   const h1Style = {
-    fontSize : '15px',
+    fontSize : '50px',   
+  }
+
+  const Style = {
+    fontSize : '50px'
   }
 
   useEffect (() =>{
-    alert(`天気は${weather.toString()}`)
+    alert(`天気は${weather.toString()}です。`)
   })
 
   return(
   <>
     <div>
       <h1 id='h1-ttl' style={h1Style}>天気</h1>
-      <p>場所を選んでください</p>
-        <select>
-            <option value="tokyo">東京</option>
-            <option value="osaka">大阪</option>
+      <p style={Style}>場所を選んでください</p>
+        <select style={Style}>
+            <option  value="tokyo">東京</option>
+            <option value="osaka" >大阪</option>
             <option value="sapporo">札幌</option>
         </select>
-      <p>時間を選んでください</p>
-      <select onChange={handleChange2}>
+      <p style={Style}>時間を選んでください</p>
+      <select style={Style} onChange={handleChange2}>
           <option value="晴れ">AM 9:00</option>
           <option value="雨">AM 12:00</option>
           <option value="くもり">AM 15:00</option>
